@@ -98,7 +98,7 @@ Since $lg^*n = 1+lg(lgn)$ if $n>1$, $f(n)=lg(lg^*n)=lg(1+lg(lgn))$ and $g(n)=lg^
 	\\\\
 	\frac{g(n)}{f(n)} = \frac{1+lg(x)}{lg(1+x)} \leq 2
 \end{eqnarray*}
-for all $x\geq1 f(n)=\Theta(g)$.
+for all $x\geq1$  $f(n)=\Theta(g)$.
 
 
 \item $f(n) = \frac{lgn^2}{n},\ g(n) = lg^*n$
@@ -113,12 +113,19 @@ To compare the two funcitons and to keep them consistent, we can take the $lg$ o
 
 \item $f(n) = e^{cos(n)},\ g(n) = lgn$
 
+To compare the two funcitons and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $ln(f(n)) = ln(e^{cos(n)}) = cos(n)$ and $ln(g(n)) = ln(lgn)$. The cosine curve ranges from -1 to 1 and is infinitely repetitive. 
+
 \item $f(n) = lgn^2,\ g(n) = (lgn)^2$
 
 $f(n)=lg(n^2)=2lgn$ and $g(n)=(lgn)^2=(lgn)^2$. The exponential function grows faster, so $f(n)$ = $O(g)$.
 
 \item $f(n) = \sqrt{4n^2 - 12n + 9},\ g(n) = n^{\frac{3}{2}}$
+
+$f(n)=\sqrt{4n^2 - 12n + 9}=(4n^2-12n+9)^{1/2}$ Since the $n^2$ term dominates, we can drop all the other terms to $n^2$, giving us $(4n^2)^{1/2}$, or, simply, a linear function since $\sqrt{n^2}=n$. $g(n)=n^{3/2}$ is an exponential function, which grows faster than a linear function, so $f(n)$ = $O(g)$.
+
 \item $f(n) = \sum_{k=1}^{n} k, g(n) = (n+2)^2$
+$f(n) = \sum_{k=1}^{n} k=\frac{n(n+1)}{2}=\frac{n^2+n}{2}$, and $n^2$ is the term that dominates, so $f(n)$ is order $n^2$. $g(n)=(n+2)^2=n^2+4n+4$. Similarly, $n^2$ is the term that dominates, so $g(n)$ is order $n^2$ as well. Therefore, $f(n)=\Theta(g)$.
+
 \end{enumerate}
 
 {\emph Note:} The $lg^*n$ function is the number of times the
