@@ -78,26 +78,45 @@ $f(n) = \sqrt{2^{7n}} = 2^{7n/2}$ and $g(n)$ = $2n lg(7)$. $f(n)$ is an exponent
 
 \item $f(n) = 2^{nln(n)},\ g(n) = n!$
 
-Since $g(n) = n!$, we can use Stirling's approximation: $ln(n!) = n ln(n) - n + O(ln n)$. To get it in the same form as Stirling's we take $ln$ of $f(n)$ and $ln$ of $g(n)$
-Stirling's approximation states that $ln(n!) = n ln(n) - n + O(ln n)$. Taking
-the natural logarithm of $f(n)$, we have
+Since $g(n) = n!$, we can use Stirling's approximation: $ln(n!) = n ln(n) - n + O(ln n)$. To get it in the same form as Stirling's we take $ln$ of $f(n)$ and $ln$ of $g(n)$ to be consistent so that we can compare the two functions later.
 \begin{eqnarray*}
-    ln(f(n)) &=& ln(2^{n ln(n)}) \\
-             &=& ln(2) n ln(n) \\
-             &=& O(n log n)
+	ln(f(n)) &=& ln(2^{nln(n)}) \\
+		&=& ln(2)nln(n)
+\end{eqnarray*}
+\begin{eqnarray*}
+	ln(g(n)) &=& ln(n!) \\
+		&=& nln(n)-n+O(ln(n))	
 \end{eqnarray*}
 
-Thus, $f(n) = \Theta(g(n))$.
+$ln(f(n))$ is $O(nlnn)$, which grows faster than $ln(g(n))$ because it has more terms appended to it in addition to $O(nlnn)$, so $f(n)$ = $\Omega(g)$.
 
 \item $f(n) = lg(lg^*n),\  g(n) = lg^*(lgn)$
 
+Since $lg^*n = 1+lg(lgn)$ if $n>1$, $f(n)=lg(lg^*n)=lg(1+lg(lgn))$ and $g(n)=lg^*(lgn)=1+lg(lg(lgn))$. Let $x=lg(lgn)$. Then, $f(n)=lg(1+x)$ and $g(n)=1+lg(x)$. As the limit of x approaches infinity, $lg(1+x)-lg(x)=0$, so $lg(1+x)-lg(x)=0=1$.
+\begin{eqnarray*}
+	\frac{f(n)}{g(n)} = \frac{lg(1+x)}{1+lg(x)} \leq lg2
+	\\\\
+	\frac{g(n)}{f(n)} = \frac{1+lg(x)}{lg(1+x)} \leq 2
+\end{eqnarray*}
+for all $x\geq1 f(n)=\Theta(g)$.
 
 
 \item $f(n) = \frac{lgn^2}{n},\ g(n) = lg^*n$
+
 \item $f(n) = 2^n,\ g(n) = n^{lgn}$
+
+To compare the two functions and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $lg(f(n))=lg(2^n)=nlg(2)$ and $lg(g(n))=lg(n^{lgn})=lgnlgn=lg^2n$. The linear function, $f(n)$ grows faster, so $f(n)$ = $\Omega(g)$.
+
 \item $f(n) = 2^{\sqrt{lgn}},\ g(n) = n(lgn)^3$
+
+To compare the two funcitons and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $lg(f(n))=lg(2^{\sqrt{lgn}})=\sqrt{lgn}lg(2)$ and $lg(g(n))=lg(n(lgn)^3)=3lg(n(lgn))$. 
+
 \item $f(n) = e^{cos(n)},\ g(n) = lgn$
+
 \item $f(n) = lgn^2,\ g(n) = (lgn)^2$
+
+$f(n)=lg(n^2)=2lgn$ and $g(n)=(lgn)^2=(lgn)^2$. The exponential function grows faster, so $f(n)$ = $O(g)$.
+
 \item $f(n) = \sqrt{4n^2 - 12n + 9},\ g(n) = n^{\frac{3}{2}}$
 \item $f(n) = \sum_{k=1}^{n} k, g(n) = (n+2)^2$
 \end{enumerate}
