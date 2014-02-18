@@ -40,7 +40,7 @@
 
 \sloppy
 
-\noindent Group members: Matt Demusz, Frank Porco, Joyce Wang
+\noindent {\bf Group members: Matt Demusz, Frank Porco, Joyce Wang}
 
 \vspace{0.1in}
 
@@ -219,8 +219,58 @@ $$x^y = \left\{
 \noindent {\bf Problem 4:}
 \begin{myitem}
 \item Compute the following: $2^{902}$ mod 7.\\
+
+$2^{902}$ mod 7 => $(2^{3})^{300}2^{2}$ mod 7 => $(8)^{300}2^{2}$ mod 7
+=> $(7+1)^{300}2^{2}$ mod 7\\
+From here we can use:  $(a+b)^{3} = a^{3} + 3a^{2}b + 3ab^{2} + b^{3}$ to get:\\
+$(7+1)^{300} = 7^{300} + 3(7)^{200}(1) + 3(7)(1)^{200} + (1)^{300}$\\
+The first three terms of this are divisible by 7, so they can be canceled out.
+This leaves us with $1^{300}2^{2}$ mod 7 => 4 mod 7 => 4\\
+$$2^{902} mod 7 = 4$$\\
+
 \item Find the modulo multiplicative inverse of 11 mod 120, 13 mod 45,
   35 mod 77, 9 mod 11, 11 mod 1111.\\
+
+\noindent {\bf 11 mod 120:}\\
+Since the gcd(11, 120) = 1, we know that there is a modulo multiplicative inverse
+(x) of 11 mod 120. We use the equation $a*b \equiv 1 \pmod{n}$, where b is the
+modulo multiplicative inverse of a (mod n) to solve for our x.\\
+$11x \equiv 1 \pmod{120}$\\
+$11x - 1  \equiv 0 \pmod{120}$\\
+If x is 11, then:\\
+$11(11)-1 \equiv 0 \pmod{120}$\\
+$120 \equiv 0 \pmod{120}$\\
+Which proves true, so the modulo multiplicative inverse of 11 mod 120 is 11.\\
+
+\noindent {\bf 13 mod 45:} \\
+Since the gcd(13, 45) = 1, we know that there is a modulo multiplicative inverse
+(x) of 13 mod 45. We use the equation $a*b \equiv 1 \pmod{n}$, where b is the
+modulo multiplicative inverse of a (mod n) to solve for our x.\\
+$13x \equiv 1 \pmod{45}$\\
+$13x - 1  \equiv 0 \pmod{45}$\\
+If x is 7, then:\\
+$13(7)-1 \equiv 0 \pmod{45}$\\
+$90 \equiv 0 \pmod{45}$\\
+Which proves true, so the modulo multiplicative inverse of 13 mod 45 is 7.\\
+
+\noindent {\bf 35 mod 77:} \\
+Since the gcd(35, 7) $\neq$ 1, there is no modulo multiplicative inverse of 35 mod 77.\\
+
+\noindent {\bf 9 mod 11:} \\
+Since the gcd(9, 11) = 1, we know that there is a modulo multiplicative inverse
+(x) of 9 mod 11. We use the equation $a*b \equiv 1 \pmod{n}$, where b is the
+modulo multiplicative inverse of a (mod n) to solve for our x.\\
+$9x \equiv 1 \pmod{11}$\\
+$9x - 1  \equiv 0 \pmod{11}$\\
+If x is 5, then:\\
+$9(5)-1 \equiv 0 \pmod{11}$\\
+$44 \equiv 0 \pmod{11}$\\
+Which proves true, so the modulo multiplicative inverse of 9 mod 11 is 5.\\
+
+\noindent {\bf 11 mod 1111:}\\ 
+Since the gcd(11, 1111) $\neq$ 1, there is no modulo multiplicative inverse of 11 mod 1111.\\
+
+
 \item Assume that for a number $x$ the following property is true:
   $\forall\ y \in [1,x-1]:\ gcd(x,y) = 1$. Compute the running time of
   an efficient algorithm for finding all the inverses modulo $x^m$
