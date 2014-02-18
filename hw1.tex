@@ -306,6 +306,9 @@ Since the gcd(11, 1111) $\neq$ 1, there is no modulo multiplicative inverse of 1
   $(5x+3y,3x+2y)$ and $(x,y)$ have the same greater common
   divisor. True or False, explain.\\
 
+gcd(5x+3x, 3x+2y) => gcd(3x+2y, 2x+y) => gcd(2x+y, x+y) => gcd(x+y, x) => gcd(x, y)\\
+This is true, because as you can see above, the gcd(5x+3y, 3x+2y) is equal to gcd(x, y).\\
+
 \item Consider the following sequence of numbers: $s_n = 1 +
   \Pi_{i=0}^{n-1} s_i$, where $s_0 = 2$. Prove that any two numbers in
   this sequence are relatively prime.\\
