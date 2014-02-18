@@ -98,7 +98,7 @@ Since $lg^*n = 1+lg(lgn)$ if $n>1$, $f(n)=lg(lg^*n)=lg(1+lg(lgn))$ and $g(n)=lg^
 	\\\\
 	\frac{g(n)}{f(n)} = \frac{1+lg(x)}{lg(1+x)} \leq 2
 \end{eqnarray*}
-for all $x\geq1 f(n)=\Theta(g)$.
+for all $x\geq1$  $f(n)=\Theta(g)$.
 
 
 \item $f(n) = \frac{lgn^2}{n},\ g(n) = lg^*n$
@@ -113,12 +113,19 @@ To compare the two funcitons and to keep them consistent, we can take the $lg$ o
 
 \item $f(n) = e^{cos(n)},\ g(n) = lgn$
 
+To compare the two funcitons and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $ln(f(n)) = ln(e^{cos(n)}) = cos(n)$ and $ln(g(n)) = ln(lgn)$. The cosine curve ranges from -1 to 1 and is infinitely repetitive. 
+
 \item $f(n) = lgn^2,\ g(n) = (lgn)^2$
 
 $f(n)=lg(n^2)=2lgn$ and $g(n)=(lgn)^2=(lgn)^2$. The exponential function grows faster, so $f(n)$ = $O(g)$.
 
 \item $f(n) = \sqrt{4n^2 - 12n + 9},\ g(n) = n^{\frac{3}{2}}$
+
+$f(n)=\sqrt{4n^2 - 12n + 9}=(4n^2-12n+9)^{1/2}$ Since the $n^2$ term dominates, we can drop all the other terms to $n^2$, giving us $(4n^2)^{1/2}$, or, simply, a linear function since $\sqrt{n^2}=n$. $g(n)=n^{3/2}$ is an exponential function, which grows faster than a linear function, so $f(n)$ = $O(g)$.
+
 \item $f(n) = \sum_{k=1}^{n} k, g(n) = (n+2)^2$
+$f(n) = \sum_{k=1}^{n} k=\frac{n(n+1)}{2}=\frac{n^2+n}{2}$, and $n^2$ is the term that dominates, so $f(n)$ is order $n^2$. $g(n)=(n+2)^2=n^2+4n+4$. Similarly, $n^2$ is the term that dominates, so $g(n)$ is order $n^2$ as well. Therefore, $f(n)=\Theta(g)$.
+
 \end{enumerate}
 
 {\emph Note:} The $lg^*n$ function is the number of times the
@@ -199,12 +206,26 @@ then show how the overall running time emerges.\\
   node can have at most $m$ children and the tree has at most $N$
   nodes total. Compute a lower bound for the height of the tree.\\
 
+For a binary tree, the number of nodes is $2^{h+1}-1$, so the number of nodes in a m-ary tree is $m^{h+1}-1$. To find the lower bound for the height of the tree, we can solve for h, where N is the number of nodes, m is the number of children each node has, and h is the height:
+\begin{eqnarray*}
+	N &=& m^{h+1}-1\\
+	N+1 &=& m^{h+1}\\
+	ln(N+1) &=& ln(m^{h+1})\\
+	ln(N+1) &=& (h+1)(lnm)\\
+	\frac{ln(N+1)}{lnm} &=& h+1\\
+	ln(N+1-m) &=& h+1\\
+	h &=& ln(N+1-m)-1
+\end{eqnarray*}
+Therefore, the lower bound forthe height of the tree is $h=ln(N+1-m)-1$.\\
+
 \item Consider two such trees $T_m^N$ and $T_{m'}^N$ that are
   ``perfect'', i.e., every node has exactly $m$ and $m'$ children
   correspondingly. Now, consider the functions $h_m(N)$ and
   $h_{m'}(N)$ that express the heights of these perfect trees for
   different values of $N$. What is the asymptotic behavior of $h_m$
   relative to $h_{m'}$ and under what conditions?\\
+
+The asympototic behavior is the $O(h)$. $ln(N+1-m)-1$ is $O(ln(N-m))$, dropping all constants, where N is the number of nodes and m is the number of children each node has. We made the assumption that the tree was perfect. \\
 
 \item Consider the following rule for modular exponentiation, where
   $x$ is in the order of $2^m$ and $y$ is in the order of $2^n$. What
@@ -214,6 +235,8 @@ $$x^y = \left\{
     (x ^{\lfloor \frac{y}{2} \rfloor} )^2,  & \textrm{ if y is even }\\
     x \cdot (x^{\lfloor \frac{y}{2} \rfloor} )^2, & \textrm{ if y is odd}
 \end{array}\right.$$
+
+Since we're computing the result according to the rule above, we need to calculate the run time of the rule. We are given that $x$ is in the order of $2^m$ (m+1 bits) and $y$ is in the order of $2^n$ (n+1 bits) as our input. The recursion ends after $n+1$ calls since at each recursive step, $y$ is halved, so the number of bits for y is decreased by 1. Then, in every call, we have a right shift, finding the last bit, a left shift, and sometimes addition, which gives us $O(n)$ bit operations. Therefore, the total running time is $(n+1)*(m+1)$, which gives us $O(nm)$ as the run time.\\
 \end{myitem}
 
 \noindent {\bf Problem 4:}
