@@ -154,6 +154,22 @@ pseudo-code indicate the best running time for the corresponding
 operation given current knowledge from lectures and recitations and
 then show how the overall running time emerges.\\
 
+1. $O(n)$: from notes\\
+\indent 2. $O(1)$: check the last bit\\
+\indent 3. $O(n)$: worst case for addition is having to flip 1s through the entire number\\
+\indent 4. $O(n^2)$\\
+\indent 5. $O(n)$: for loop runs linearly; everything inside gets multiplied by n\\
+\indent 6. $O(n^3)$: Euclid's algorithm from notes\\
+\indent 7. $O(1)$: returning a boolean doesn't depend on input size\\
+\indent 8. $O(n)$\\
+\indent 9. $O(n^2)$: problem specifies multiplication (the "power x") as $O(n^2)$; number in front is dropped\\
+\indent 10. $O(n)$\\
+\indent 11. $O(n^2)$: problem specifies multiplication (the "power 2") as $O(n^2)$\\
+\indent 12. $O(n)$:a mod b\\
+\indent 13. $O(n log^3n)$: primality test\\
+\indent 14. $O(1)$: returning a boolean doesn't depend on input size\\
+\indent 15. $O(1)$: returning a boolean doesn't depend on input size\\
+
 \begin{center}
 {\bf Part B (30 points)}
 \end{center}
@@ -362,13 +378,20 @@ the third column is the residues modulo 7.\\
 following is true: for every pair of numbers $m$ and $n$ so that: $0
 \leq m < x$ and $0 \leq n < y$, there is a unique integer $q$, where
 $0 \leq q < xy$, so that:
-
 $$q \equiv m \pmod{x}$$
 $$q \equiv n \pmod{y}$$
 
-[Hint: Think how many $q$'s in the range $[0,xy]$ can have the same
-  result modulo $x$ and modulo $y$ and count how many $q$'s there
-  are.]\\
+Suppose there exists $q_1, q_2$ and $q_1 != q_2$ such that $q_1 = (m, n)$ and $q_2 = (m, n)$\\
+
+1. $q_1 = k_1x+m$, $q_2 = l_1x+m$\\
+\indent 2. $q_1 = k_2y+n$, $q_2 = l_2y+n$\\
+\indent 3. $q_1 - q_2 = (k_1x + m) - (l_1x + m) = (k_1 - l_1)$ from 1
+\indent 4. $q_1 - q_2 = (k_2 - l_2) y$ from 2
+\indent 5. $(k_1 - l_1)x = (k_2 - l_2)y$\\
+\indent 6. $x=\dfrac{(k_2 - l_2)}{(k_1 - l_1)}y$\\
+\indent 7. $\dfrac{(k_2 - l_2)}{(k_1 - l_1)} = 1$ because prime number x can't be the product of two numbers\\
+\indent 8. $x = y$ contradicts hypothesis\\
+\indent 9. x and y have to be equal\\
   
 \noindent C. The previous problem asks to go from $q$ to $(m,n)$. It is also
 possible to go the other way. In particular, show the following:
@@ -384,6 +407,8 @@ their values $\mod{x}$ and $\mod{y}$.]\\
 \noindent D. What happens in the case of three primes $x$, $y$ and $z$? Do the
 above properties still hold? If they do, how do they look like in this
 case?\\
+
+
 
 \noindent {\bf Problem 9:} There is an office, in which every member
 uses RSA to conduct secure communication with others.  For example,
