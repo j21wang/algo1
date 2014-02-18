@@ -244,22 +244,55 @@ $\mathcal{H}$.\\
 
 \item Assume that number $n$ is prime, then all numbers $1 \leq x < n$
   are invertible modulo $n$. Which of these numbers are their own
-  inverse module $n$?
+  inverse module $n$?\\
+
+For a number (x) to be its own inverse, the following must be true:
+$$x^{2} \equiv 1 \pmod{n}$$
+So $x^{2} \equiv 1 \pmod{n}$ --> $x^{2}-1 \equiv 0 \pmod{n}$
+--> $(x-1)(x+1) \equiv 0 \pmod{n}$\\
+Since n is prime, we must have either $(x-1) \equiv 0 \pmod{n}$
+or $(x+1) \equiv 0 \pmod{n}$. So the only numbers that will satisfy 
+these two equations for x are 1 ($((1)-1) \equiv 0 \pmod{n}$ and 
+n-1 ($((n-1)+1) \equiv 0 \pmod{n}$. This means that the only numbers
+that are greater than or equal to 1 and less than n that are their own
+inverse are 1 and n-1.
 
 \item Show that $(n-1)! \equiv -1 \mod n$) for prime $n$. [Hint:
   Compute the value of $(n-1) \mod n$ by considering how it arises by
   pairing two numbers smaller than $n$ that are multiplicative
-  inverses modulo $n$.]
+  inverses modulo $n$.]\\
+
+Since n is prime, each number $a = {1, ... , n-1}$ has an inverse $\pmod{n}$. 
+We can pair up the numbers in between 2 and n-2 so that a number in the pair
+is the modular inverse of the other. 1 and n-1 are their own modular inverse, as proven above.
+Multiplying these pairs, 1 , and n-1 is the same as (n-1)!. Since each of these pairs
+are a number grouped with their modular inverse, they each only contribute a value of 1,
+since for each pair:
+$$pair \equiv 1 \pmod{n}$$
+So that leaves the 1 and the n-1, meaning that:
+$$(n-1)! \equiv 1 * (n-1) \equiv (n-1) \equiv -1 \pmod{n} \hspace{.2in}=> \hspace{.2in} n \equiv 0 \pmod{n}$$
+Showing that the original equation is true for a prime n.
+
 
 \item Show that if $n$ is not prime, then $(n-1)! \neq -1 \mod
   n$. [Hint: What does it mean that $n$ is not prime in terms of the
-    numbers $1 \leq x < n$?]
+    numbers $1 \leq x < n$?]\\
+
+Since n is not a prime number, it has a divisor (a) such that 1 < a < n.
+So a must be one of the numbers that makes up (n-1)!. This tells us that
+a divides (n-1)! Looking at the origanal equation, $(n-1)! = -1 \pmod{n}$
+--> $(n-1)!+1 = 0 \pmod{n}$. This tells us that n divides\\((n-1)! + 1), and since
+a is a divisor of n, a must also divide ((n-1)! + 1). But if that were the case, then
+that would mean that a divides both (n-1)! and ((n-1)! + 1). This would mean a would 
+have to equal 1, which contradicts 1 < a < n.\\Therefore, if n is not prime, then
+$(n-1)! \neq -1 \pmod{n}$.
 
 \item The above process can be used as a primality test instead of
   Fermat's Little theorem as it is an if-and-only-if condition for
   primality. Why can't we immediately base a primality test on this
   rule? [Tip: Even if you are not able to answer the previous two
     questions, you should be able to argue about this question.]\\
+
 
 \end{itemize}
 
