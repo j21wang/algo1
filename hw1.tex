@@ -173,6 +173,22 @@ pseudo-code indicate the best running time for the corresponding
 operation given current knowledge from lectures and recitations and
 then show how the overall running time emerges.\\
 
+1. $O(n)$: from notes\\
+\indent 2. $O(1)$: check the last bit\\
+\indent 3. $O(n)$: worst case for addition is having to flip 1s through the entire number\\
+\indent 4. $O(n^2)$\\
+\indent 5. $O(n)$: for loop runs linearly; everything inside gets multiplied by n\\
+\indent 6. $O(n^3)$: Euclid's algorithm from notes\\
+\indent 7. $O(1)$: returning a boolean doesn't depend on input size\\
+\indent 8. $O(n)$\\
+\indent 9. $O(n^2)$: problem specifies multiplication (the "power x") as $O(n^2)$; number in front is dropped\\
+\indent 10. $O(n)$\\
+\indent 11. $O(n^2)$: problem specifies multiplication (the "power 2") as $O(n^2)$\\
+\indent 12. $O(n)$:a mod b\\
+\indent 13. $O(n log^3n)$: primality test\\
+\indent 14. $O(1)$: returning a boolean doesn't depend on input size\\
+\indent 15. $O(1)$: returning a boolean doesn't depend on input size\\
+
 \begin{center}
 {\bf Part B (30 points)}
 \end{center}
@@ -263,22 +279,55 @@ $\mathcal{H}$.\\
 
 \item Assume that number $n$ is prime, then all numbers $1 \leq x < n$
   are invertible modulo $n$. Which of these numbers are their own
-  inverse module $n$?
+  inverse module $n$?\\
+
+For a number (x) to be its own inverse, the following must be true:
+$$x^{2} \equiv 1 \pmod{n}$$
+So $x^{2} \equiv 1 \pmod{n}$ --> $x^{2}-1 \equiv 0 \pmod{n}$
+--> $(x-1)(x+1) \equiv 0 \pmod{n}$\\
+Since n is prime, we must have either $(x-1) \equiv 0 \pmod{n}$
+or $(x+1) \equiv 0 \pmod{n}$. So the only numbers that will satisfy 
+these two equations for x are 1 ($((1)-1) \equiv 0 \pmod{n}$ and 
+n-1 ($((n-1)+1) \equiv 0 \pmod{n}$. This means that the only numbers
+that are greater than or equal to 1 and less than n that are their own
+inverse are 1 and n-1.
 
 \item Show that $(n-1)! \equiv -1 \mod n$) for prime $n$. [Hint:
   Compute the value of $(n-1) \mod n$ by considering how it arises by
   pairing two numbers smaller than $n$ that are multiplicative
-  inverses modulo $n$.]
+  inverses modulo $n$.]\\
+
+Since n is prime, each number $a = {1, ... , n-1}$ has an inverse $\pmod{n}$. 
+We can pair up the numbers in between 2 and n-2 so that a number in the pair
+is the modular inverse of the other. 1 and n-1 are their own modular inverse, as proven above.
+Multiplying these pairs, 1 , and n-1 is the same as (n-1)!. Since each of these pairs
+are a number grouped with their modular inverse, they each only contribute a value of 1,
+since for each pair:
+$$pair \equiv 1 \pmod{n}$$
+So that leaves the 1 and the n-1, meaning that:
+$$(n-1)! \equiv 1 * (n-1) \equiv (n-1) \equiv -1 \pmod{n} \hspace{.2in}=> \hspace{.2in} n \equiv 0 \pmod{n}$$
+Showing that the original equation is true for a prime n.
+
 
 \item Show that if $n$ is not prime, then $(n-1)! \neq -1 \mod
   n$. [Hint: What does it mean that $n$ is not prime in terms of the
-    numbers $1 \leq x < n$?]
+    numbers $1 \leq x < n$?]\\
+
+Since n is not a prime number, it has a divisor (a) such that 1 < a < n.
+So a must be one of the numbers that makes up (n-1)!. This tells us that
+a divides (n-1)! Looking at the origanal equation, $(n-1)! = -1 \pmod{n}$
+--> $(n-1)!+1 = 0 \pmod{n}$. This tells us that n divides\\((n-1)! + 1), and since
+a is a divisor of n, a must also divide ((n-1)! + 1). But if that were the case, then
+that would mean that a divides both (n-1)! and ((n-1)! + 1). This would mean a would 
+have to equal 1, which contradicts 1 < a < n.\\Therefore, if n is not prime, then
+$(n-1)! \neq -1 \pmod{n}$.
 
 \item The above process can be used as a primality test instead of
   Fermat's Little theorem as it is an if-and-only-if condition for
   primality. Why can't we immediately base a primality test on this
   rule? [Tip: Even if you are not able to answer the previous two
     questions, you should be able to argue about this question.]\\
+
 
 \end{itemize}
 
@@ -348,13 +397,20 @@ the third column is the residues modulo 7.\\
 following is true: for every pair of numbers $m$ and $n$ so that: $0
 \leq m < x$ and $0 \leq n < y$, there is a unique integer $q$, where
 $0 \leq q < xy$, so that:
-
 $$q \equiv m \pmod{x}$$
 $$q \equiv n \pmod{y}$$
 
-[Hint: Think how many $q$'s in the range $[0,xy]$ can have the same
-  result modulo $x$ and modulo $y$ and count how many $q$'s there
-  are.]\\
+Suppose there exists $q_1, q_2$ and $q_1 != q_2$ such that $q_1 = (m, n)$ and $q_2 = (m, n)$\\
+
+1. $q_1 = k_1x+m$, $q_2 = l_1x+m$\\
+\indent 2. $q_1 = k_2y+n$, $q_2 = l_2y+n$\\
+\indent 3. $q_1 - q_2 = (k_1x + m) - (l_1x + m) = (k_1 - l_1)$ from 1
+\indent 4. $q_1 - q_2 = (k_2 - l_2) y$ from 2
+\indent 5. $(k_1 - l_1)x = (k_2 - l_2)y$\\
+\indent 6. $x=\dfrac{(k_2 - l_2)}{(k_1 - l_1)}y$\\
+\indent 7. $\dfrac{(k_2 - l_2)}{(k_1 - l_1)} = 1$ because prime number x can't be the product of two numbers\\
+\indent 8. $x = y$ contradicts hypothesis\\
+\indent 9. x and y have to be equal\\
   
 \noindent C. The previous problem asks to go from $q$ to $(m,n)$. It is also
 possible to go the other way. In particular, show the following:
@@ -370,6 +426,8 @@ their values $\mod{x}$ and $\mod{y}$.]\\
 \noindent D. What happens in the case of three primes $x$, $y$ and $z$? Do the
 above properties still hold? If they do, how do they look like in this
 case?\\
+
+
 
 \noindent {\bf Problem 9:} There is an office, in which every member
 uses RSA to conduct secure communication with others.  For example,
@@ -390,9 +448,9 @@ checked their public keys in the directory. This is what Mallory got:
   \begin{tabular}{ | c | c | c | }
     \hline
     Receiver & Encrypted message & Public key \\ \hline
-    Bob & 153 & (155, 3) \\
-    Charlie & 196 & (203, 3) \\
-    David & 27 & (117, 3) \\
+    Bob & 674 & (3337, 3) \\
+    Charlie & 36 & (187, 3) \\
+    David & 948 & (1219, 3) \\
     \hline
   \end{tabular}
 \end{center}
@@ -401,7 +459,35 @@ checked their public keys in the directory. This is what Mallory got:
 Mallory do this? What is the original message?\\
 
 \noindent {\bf How Malory did it:} Malory could have used a combination of
-the chinese remainder theorem and Gauss's algorithm:
+the chinese remainder theorem and Gauss's algorithm. Malory can use Gauss's
+algorithm to find the message (x) using the enrypted messges ($c_1$,$c_2$,$c_3$),
+and the N values ($n_1$,$n_2$,$n_3$) respectivley.
+
+$$x \equiv c_1 \pmod{n_1}$$
+$$x \equiv c_2 \pmod{n_2}$$
+$$x \equiv c_3 \pmod{n_3}$$
+
+\noindent From the chinese remainder theorem, we know that the above congruences
+have a solution (x) which is unique modulo $n_1$,$n_2$,$n_3$. Now we can use Guass's
+algorithm to solve for x.\\
+
+\noindent $n_1 = 3337$ \hspace{1in} $c_1 = 674$\\
+$n_2 = 187$ \hspace{1.1in} $c_2 = 36$ \hspace{1in} $e = 3$\\
+$n_3 = 1219$ \hspace{1in} $c_3 = 948$\\
+$N = n_1n_2n_3 = 3337*187*1219 = 760679161$\\
+$N_1 = N/n_1 = 760679161/3337 = 227953$\\
+$N_2 = N/n_2 = 760679161/187 = 4067803$\\
+$N_3 = N/n_3 = 760679161/1219 = 624019$\\
+$d_1 = N_1^{-1} \pmod{n_1} = 227953^{-1} \pmod{3337} = 251$\\
+$d_2 = N_2^{-1} \pmod{n_2} = 4067803^{-1} \pmod{187} = 70$\\
+$d_3 = N_3^{-1} \pmod{n_3} = 624019^{-1} \pmod{1219} = 671$\\
+$x^{3} = c_1N_1d_1 + c_2N_2d_2 + c_3N_3d_3 \pmod {N}$\\
+$x^{3} = ((674*227953*251)+(36*4067803*70)+(948*624019*671))\pmod{760679161}$\\
+$x^{3} = 74088$\\
+$x = 42$\\
+
+\noindent Malory, knowing the encrypted messages and the respective public keys could have
+applied Gauss's theorem like this and have come up with the original message (x), which was 42.
 
 \end{document}
 
