@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 FEB 2014 15:12
-=======
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 FEB 2014 14:33
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 FEB 2014 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -671,8 +667,7 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip80
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-)
-No file hw1.aux.
+) (./hw1.aux)
 \openout1 = `hw1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -689,7 +684,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 39.
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 39.
@@ -852,239 +847,147 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--182
  []
 
 
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 183--198
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 176--191
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
 
  []
 
 [2]
-<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 205--208
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 198--201
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 209--215
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 202--208
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
 
  []
 
 
-<<<<<<< HEAD
+Underfull \hbox (badness 10000) in paragraph at lines 221--227
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 228--229
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 229--231
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
-
- []
-
-
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 231--235
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 224--228
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
-
- []
-
-
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 239--242
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
-
- []
-
-
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 243--246
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 236--239
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
-
- []
-
-
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 252--256
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 262--265
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 245--249
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 267--272
-=======
+Underfull \hbox (badness 10000) in paragraph at lines 245--247
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--251
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 255--258
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 259--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 294--296
 
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for TS1+fav on input line 287.
+LaTeX Font Info:    Try loading font information for TS1+fav on input line 303.
 
-LaTeX Font Info:    No file TS1fav.fd. on input line 287.
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 260--265
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
-
- []
-
-[4]
-LaTeX Font Info:    Try loading font information for TS1+fav on input line 280.
-
-LaTeX Font Info:    No file TS1fav.fd. on input line 280.
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+LaTeX Font Info:    No file TS1fav.fd. on input line 303.
 
 
 LaTeX Font Warning: Font shape `TS1/fav/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-<<<<<<< HEAD
-(Font)              for symbol `textbullet' on input line 287.
+(Font)              for symbol `textbullet' on input line 303.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--290
-=======
-(Font)              for symbol `textbullet' on input line 280.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 280--283
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 303--306
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 302--306
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 295--299
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 318--322
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 319--322
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 312--315
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 335--338
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 332--337
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 325--330
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 348--353
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 348--351
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 341--344
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 364--367
 
  []
 
 [5]
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 410--411
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 412--421
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 405--414
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 428--437
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 428--432
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 421--425
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 444--448
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 433--436
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 426--429
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 449--452
 
  []
 
 [6]
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 465--467
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 458--460
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 481--483
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 477--480
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 470--473
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 493--496
 
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 481--495
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 474--488
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Underfull \hbox (badness 10000) in paragraph at lines 497--511
 
  []
 
@@ -1092,24 +995,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--488
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
  5637 strings out of 493315
  77641 string characters out of 6137904
  162948 words of memory out of 5000000
-=======
- 5635 strings out of 493315
- 77625 string characters out of 6137904
- 162940 words of memory out of 5000000
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
  8915 multiletter control sequences out of 15000+600000
  43840 words of font info for 82 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,14n,45p,315b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,14n,45p,599b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/te
 xlive/2013/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}{/usr/local/texlive/2013
@@ -1124,11 +1018,7 @@ design/mdbch/md-chb7t.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/mathd
 esign/mdbch/md-chb7y.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/mathde
 sign/mdbch/md-chr7v.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
 cm-super/sfrm1000.pfb>
-<<<<<<< HEAD
-Output written on hw1.pdf (7 pages, 96057 bytes).
-=======
-Output written on hw1.pdf (7 pages, 94919 bytes).
->>>>>>> 2ffaeaaf5fb00221a8422198e2bf7750e39f53c2
+Output written on hw1.pdf (7 pages, 97605 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  56 compressed objects within 1 object stream
