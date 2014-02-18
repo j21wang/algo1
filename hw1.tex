@@ -259,6 +259,17 @@ Since we're computing the result according to the rule above, we need to calcula
 \item Consider the following sequence of numbers: $s_n = 1 +
   \Pi_{i=0}^{n-1} s_i$, where $s_0 = 2$. Prove that any two numbers in
   this sequence are relatively prime.\\
+
+Basis step: $s_0=2$ from given.
+Inductive step: Suppose for some $n \geq 0$ that $s_n=1+\Pi_{i=0}^{n-1} s_i$. (We need to show that $s_n+1=1+\Pi_{i=0}^{n}s_i$ is prime.)
+\begin{eqnarray*}
+	1+\Pi_{i=0}^{n} s_i &=& 1+[\Pi_{i=0}^{n-1} s_i](s_n)\\
+	&=& 1+[\Pi_{i=0}^{n-1} s_i](s_n)[1+\Pi_{i=0}^{n-1} s_i]\\
+	&=& 1+\Pi_{i=0}^{n-1} s_i+[\Pi_{i=0}^{n-1} s_i]^2\\
+\end{eqnarray*}
+
+$1+\Pi_{i=0}^{n-1} s_i+[\Pi_{i=0}^{n-1} s_i]^2$ is prime, according to the definition of prime numbers, because nothing can divide it besides 1 and itself. Therefore, by induction, $s_n$ is prime. Since $s_n$ is prime, all numbers in the sequence are prime, so any two numbers in the sequence are relatively prime.
+
 \end{myitem}
 
 \begin{center}
