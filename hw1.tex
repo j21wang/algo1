@@ -78,7 +78,7 @@ $f(n) = \sqrt{2^{7n}} = 2^{7n/2}$ and $g(n)$ = $2n lg(7)$. $f(n)$ is an exponent
 
 \item $f(n) = 2^{nln(n)},\ g(n) = n!$
 
-Since $g(n) = n!$, we can use Stirling's approximation: $ln(n!) = n ln(n) - n + O(ln n)$. To get it in the same form as Stirling's we take $ln$
+Since $g(n) = n!$, we can use Stirling's approximation: $ln(n!) = n ln(n) - n + O(ln n)$. To get it in the same form as Stirling's we take $ln$ of $f(n)$ and $ln$ of $g(n)$
 Stirling's approximation states that $ln(n!) = n ln(n) - n + O(ln n)$. Taking
 the natural logarithm of $f(n)$, we have
 \begin{eqnarray*}
@@ -396,9 +396,9 @@ checked their public keys in the directory. This is what Mallory got:
   \begin{tabular}{ | c | c | c | }
     \hline
     Receiver & Encrypted message & Public key \\ \hline
-    Bob & 153 & (155, 3) \\
-    Charlie & 196 & (203, 3) \\
-    David & 27 & (117, 3) \\
+    Bob & 674 & (3337, 3) \\
+    Charlie & 36 & (187, 3) \\
+    David & 948 & (1219, 3) \\
     \hline
   \end{tabular}
 \end{center}
@@ -406,10 +406,36 @@ checked their public keys in the directory. This is what Mallory got:
 \noindent Finally, Mallory recovered the original message. How did
 Mallory do this? What is the original message?\\
 
-\noindent [Hint: Consider how the three transmitted messages are
-  computed. The result of the previous problem 8 is useful here. Be
-  careful with the details and under which conditions you apply
-  certain expressions.]\\
+\noindent {\bf How Malory did it:} Malory could have used a combination of
+the chinese remainder theorem and Gauss's algorithm. Malory can use Gauss's
+algorithm to find the message (x) using the enrypted messges ($c_1$,$c_2$,$c_3$),
+and the N values ($n_1$,$n_2$,$n_3$) respectivley.
+
+$$x \equiv c_1 \pmod{n_1}$$
+$$x \equiv c_2 \pmod{n_2}$$
+$$x \equiv c_3 \pmod{n_3}$$
+
+\noindent From the chinese remainder theorem, we know that the above congruences
+have a solution (x) which is unique modulo $n_1$,$n_2$,$n_3$. Now we can use Guass's
+algorithm to solve for x.\\
+
+\noindent $n_1 = 3337$ \hspace{1in} $c_1 = 674$\\
+$n_2 = 187$ \hspace{1.1in} $c_2 = 36$ \hspace{1in} $e = 3$\\
+$n_3 = 1219$ \hspace{1in} $c_3 = 948$\\
+$N = n_1n_2n_3 = 3337*187*1219 = 760679161$\\
+$N_1 = N/n_1 = 760679161/3337 = 227953$\\
+$N_2 = N/n_2 = 760679161/187 = 4067803$\\
+$N_3 = N/n_3 = 760679161/1219 = 624019$\\
+$d_1 = N_1^{-1} \pmod{n_1} = 227953^{-1} \pmod{3337} = 251$\\
+$d_2 = N_2^{-1} \pmod{n_2} = 4067803^{-1} \pmod{187} = 70$\\
+$d_3 = N_3^{-1} \pmod{n_3} = 624019^{-1} \pmod{1219} = 671$\\
+$x^{3} = c_1N_1d_1 + c_2N_2d_2 + c_3N_3d_3 \pmod {N}$\\
+$x^{3} = ((674*227953*251)+(36*4067803*70)+(948*624019*671))\pmod{760679161}$\\
+$x^{3} = 74088$\\
+$x = 42$\\
+
+\noindent Malory, knowing the encrypted messages and the respective public keys could have
+applied Gauss's theorem like this and have come up with the original message (x), which was 42.
 
 \end{document}
 
