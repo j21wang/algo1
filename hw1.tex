@@ -74,11 +74,11 @@ indicate whether $f=O(g)$ or $f=\Omega(g)$ or $f=\Theta(g)$:
 \begin{enumerate}
 \item $f(n) = \sqrt{2^{7n}},\ g(n) = \lg({7^{2n}})$
 
-$f(n) = \sqrt{2^{7n}} = 2^{7n/2}$ and $g(n)$ = $2n lg(7)$. $f(n)$ is an exponential function, and $g(n)$ is a linear function. Because an exponential grows faster than a linear function, $f(n)$ = $\Omega(g)$. 
+{\bfseries ANSWER: }$f(n) = \sqrt{2^{7n}} = 2^{7n/2}$ and $g(n)$ = $2n lg(7)$. $f(n)$ is an exponential function, and $g(n)$ is a linear function. Because an exponential grows faster than a linear function, $f(n)$ = $\Omega(g)$. 
 
 \item $f(n) = 2^{nln(n)},\ g(n) = n!$
 
-Since $g(n) = n!$, we can use Stirling's approximation: $ln(n!) = n ln(n) - n + O(ln n)$. To get it in the same form as Stirling's we take $ln$ of $f(n)$ and $ln$ of $g(n)$ to be consistent so that we can compare the two functions later.
+{\bfseries ANSWER: }Since $g(n) = n!$, we can use Stirling's approximation: $ln(n!) = n ln(n) - n + O(ln n)$. To get it in the same form as Stirling's we take $ln$ of $f(n)$ and $ln$ of $g(n)$ to be consistent so that we can compare the two functions later.
 \begin{eqnarray*}
 	ln(f(n)) &=& ln(2^{nln(n)}) \\
 		&=& ln(2)nln(n)
@@ -92,34 +92,42 @@ $ln(f(n))$ is $O(nlnn)$, which grows faster than $ln(g(n))$ because it has more 
 
 \item $f(n) = lg(lg^*n),\  g(n) = lg^*(lgn)$
 
-We know that $lg^*(lgn)=1+lg^*(lgn)$, so $lg^*(lgn)=lg^*(lgn)-1$. Therefore, we have $\frac{f(n)}{g(n)}= \frac{lg^*(lgn)}{lg^*(lgn)-1}$. We can let $x=lg^*(n)$, giving us $\frac{lg(x)}{x-1}$. As x goes to infinity, $g(n)$ grows a lot faster than $g(n)$ does, so $f(n) = O(g)$.
 
+{\bfseries ANSWER: }We know that $lg^*(lgn)=1+lg^*(lgn)$, so $lg^*(lgn)=lg^*(lgn)-1$. Therefore, we have $\frac{f(n)}{g(n)}= \frac{lg^*(lgn)}{lg^*(lgn)-1}$. We can let $x=lg^*(n)$, giving us $\frac{lg(x)}{x-1}$. As x goes to infinity, $g(n)$ grows a lot faster than $g(n)$ does, so $f(n) = O(g)$.
 
 
 \item $f(n) = \frac{lgn^2}{n},\ g(n) = lg^*n$
 
+{\bfseries ANSWER: } I don't know\\
+
 \item $f(n) = 2^n,\ g(n) = n^{lgn}$
 
-To compare the two functions and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $lg(f(n))=lg(2^n)=nlg(2)$ and $lg(g(n))=lg(n^{lgn})=lgnlgn=lg^2n$. The linear function, $f(n)$ grows faster, so $f(n)$ = $\Omega(g)$.
+{\bfseries ANSWER: }To compare the two functions and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $lg(f(n))=lg(2^n)=nlg(2)$ and $lg(g(n))=lg(n^{lgn})=lgnlgn=lg^2n$. The linear function, $f(n)$ grows faster, so $f(n)$ = $\Omega(g)$.
 
 \item $f(n) = 2^{\sqrt{lgn}},\ g(n) = n(lgn)^3$
 
-To compare the two functions and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $lg(f(n))=lg(2^{\sqrt{lgn}})=\sqrt{lgn}lg(2)$ and $lg(g(n))=lg(n(lgn)^3)=3lg(n(lgn))$. When comparing $\sqrt{lgn}lg(2)$ to $3lg(n(lgn))$, we can divide out the constant from $f(n)$ to $g(n)$, giving us $\sqrt{lgn}$ to compare to $\frac{3}{lg(2)}lg(n(lgn))$. We can see that $f(n)$ grows faster than $g(n)$, so $f(n)$ = $\Omega(g)$.
+{\bfseries ANSWER: }To compare the two functions and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $lg(f(n))=lg(2^{\sqrt{lgn}})=\sqrt{lgn}lg(2)$ and $lg(g(n))=lg(n(lgn)^3)=3lg(n(lgn))$. When comparing $\sqrt{lgn}lg(2)$ to $3lg(n(lgn))$, we can divide out the constant from $f(n)$ to $g(n)$, giving us $\sqrt{lgn}$ to compare to $\frac{3}{lg(2)}lg(n(lgn))$. We can see that $f(n)$ grows faster than $g(n)$, so $f(n)$ = $\Omega(g)$.
 
 \item $f(n) = e^{cos(n)},\ g(n) = lgn$
 
-To compare the two funcitons and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $ln(f(n)) = ln(e^{cos(n)}) = cos(n)$ and $ln(g(n)) = ln(lgn)$. Although $(g(n))$ grows slowly, it will eventually exceed 1 and go to infinity, and the graph of cosine ranges from -1 to 1, so $(g(n))$ grows faster, which means that $f(n)$ = $O(g)$.
+{\bfseries ANSWER: }To compare the two funcitons and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $ln(f(n)) = ln(e^{cos(n)}) = cos(n)$ and $ln(g(n)) = ln(lgn)$. Although $(g(n))$ grows slowly, it will eventually exceed 1 and go to infinity, and the graph of cosine ranges from -1 to 1, so $(g(n))$ grows faster, which means that $f(n)$ = $O(g)$.
+
+
+\item $f(n) = e^{cos(n)},\ g(n) = lgn$
+
+{\bfseries ANSWER: }To compare the two funcitons and to keep them consistent, we can take the $lg$ of both of them. Therefore, we have $ln(f(n)) = ln(e^{cos(n)}) = cos(n)$ and $ln(g(n)) = ln(lgn)$. The cosine curve ranges from -1 to 1 and is infinitely repetitive. 
 
 \item $f(n) = lgn^2,\ g(n) = (lgn)^2$
 
-$f(n)=lg(n^2)=2lgn$ and $g(n)=(lgn)^2=(lgn)^2$. The exponential function grows faster, so $f(n)$ = $O(g)$.
+{\bfseries ANSWER: }$f(n)=lg(n^2)=2lgn$ and $g(n)=(lgn)^2=(lgn)^2$. The exponential function grows faster, so $f(n)$ = $O(g)$.
 
 \item $f(n) = \sqrt{4n^2 - 12n + 9},\ g(n) = n^{\frac{3}{2}}$
 
-$f(n)=\sqrt{4n^2 - 12n + 9}=(4n^2-12n+9)^{1/2}$ Since the $n^2$ term dominates, we can drop all the other terms to $n^2$, giving us $(4n^2)^{1/2}$, or, simply, a linear function since $\sqrt{n^2}=n$. $g(n)=n^{3/2}$ is an exponential function, which grows faster than a linear function, so $f(n)$ = $O(g)$.
+{\bfseries ANSWER: }$f(n)=\sqrt{4n^2 - 12n + 9}=(4n^2-12n+9)^{1/2}$ Since the $n^2$ term dominates, we can drop all the other terms to $n^2$, giving us $(4n^2)^{1/2}$, or, simply, a linear function since $\sqrt{n^2}=n$. $g(n)=n^{3/2}$ is an exponential function, which grows faster than a linear function, so $f(n)$ = $O(g)$.
 
 \item $f(n) = \sum_{k=1}^{n} k, g(n) = (n+2)^2$
-$f(n) = \sum_{k=1}^{n} k=\frac{n(n+1)}{2}=\frac{n^2+n}{2}$, and $n^2$ is the term that dominates, so $f(n)$ is order $n^2$. $g(n)=(n+2)^2=n^2+4n+4$. Similarly, $n^2$ is the term that dominates, so $g(n)$ is order $n^2$ as well. Therefore, $f(n)=\Theta(g)$.
+
+{\bfseries ANSWER: }$f(n) = \sum_{k=1}^{n} k=\frac{n(n+1)}{2}=\frac{n^2+n}{2}$, and $n^2$ is the term that dominates, so $f(n)$ is order $n^2$. $g(n)=(n+2)^2=n^2+4n+4$. Similarly, $n^2$ is the term that dominates, so $g(n)$ is order $n^2$ as well. Therefore, $f(n)=\Theta(g)$.
 
 \end{enumerate}
 
@@ -175,21 +183,23 @@ pseudo-code indicate the best running time for the corresponding
 operation given current knowledge from lectures and recitations and
 then show how the overall running time emerges.\\
 
-1. $O(n)$: from notes\\
+{\bfseries ANSWER: }\\
+\indent1. $O(n)$: from notes\\
 \indent 2. $O(1)$: check the last bit\\
 \indent 3. $O(n)$: worst case for addition is having to flip 1s through the entire number\\
-\indent 4. $O(n^2)$\\
+\indent 4. $O(n^2)$: from notes\\
 \indent 5. $O(n)$: for loop runs linearly; everything inside gets multiplied by n\\
 \indent 6. $O(n^3)$: Euclid's algorithm from notes\\
 \indent 7. $O(1)$: returning a boolean doesn't depend on input size\\
-\indent 8. $O(n)$\\
+\indent 8. $O(n)$: N-1 is even (because of 3), so you have a 0, drop it in decomp\\
 \indent 9. $O(n^2)$: problem specifies multiplication (the "power x") as $O(n^2)$; number in front is dropped\\
-\indent 10. $O(n)$\\
+\indent 10. $O(n)$: for loop runs linearly\\
 \indent 11. $O(n^2)$: problem specifies multiplication (the "power 2") as $O(n^2)$\\
-\indent 12. $O(n)$:a mod b\\
-\indent 13. $O(n log^3n)$: primality test\\
+\indent 12. $O(n)$: addition in worst case\\
+\indent 13. $O(n log^3n)$: primality test from notes\\
 \indent 14. $O(1)$: returning a boolean doesn't depend on input size\\
 \indent 15. $O(1)$: returning a boolean doesn't depend on input size\\
+\indent The overall runtime is $O(n^4)$ because the highest term is $n^3$ (which gets multiplied by $n$ because of the for loop)
 
 \begin{center}
 {\bf Part B (30 points)}
@@ -201,7 +211,7 @@ then show how the overall running time emerges.\\
   node can have at most $m$ children and the tree has at most $N$
   nodes total. Compute a lower bound for the height of the tree.\\
 
-For a binary tree, the number of nodes is $2^{h+1}-1$, so the number of nodes in a m-ary tree is $m^{h+1}-1$. To find the lower bound for the height of the tree, we can solve for h, where N is the number of nodes, m is the number of children each node has, and h is the height:
+{\bfseries ANSWER: }For a binary tree, the number of nodes is $2^{h+1}-1$, so the number of nodes in a m-ary tree is $m^{h+1}-1$. To find the lower bound for the height of the tree, we can solve for h, where N is the number of nodes, m is the number of children each node has, and h is the height:
 \begin{eqnarray*}
 	N &=& m^{h+1}-1\\
 	N+1 &=& m^{h+1}\\
@@ -220,7 +230,7 @@ Therefore, the lower bound forthe height of the tree is $h=ln(N+1-m)-1$.\\
   different values of $N$. What is the asymptotic behavior of $h_m$
   relative to $h_{m'}$ and under what conditions?\\
 
-The asympototic behavior is the $O(h)$. $ln(N+1-m)-1$ is $O(ln(N-m))$, dropping all constants, where N is the number of nodes and m is the number of children each node has. We made the assumption that the tree was perfect. \\
+{\bfseries ANSWER: }The asympototic behavior is the $O(h)$. $ln(N+1-m)-1$ is $O(ln(N-m))$, dropping all constants, where N is the number of nodes and m is the number of children each node has. We made the assumption that the tree was perfect. \\
 
 \item Consider the following rule for modular exponentiation, where
   $x$ is in the order of $2^m$ and $y$ is in the order of $2^n$. What
@@ -231,14 +241,16 @@ $$x^y = \left\{
     x \cdot (x^{\lfloor \frac{y}{2} \rfloor} )^2, & \textrm{ if y is odd}
 \end{array}\right.$$
 
-Since we're computing the result according to the rule above, we need to calculate the run time of the rule. We are given that $x$ is in the order of $2^m$ (m+1 bits) and $y$ is in the order of $2^n$ (n+1 bits) as our input. The recursion ends after $n+1$ (number of bits) calls since at each recursive step, $y$ is halved, so the number of bits for y is decreased by 1. Then, in every call, we have a right shift, finding the last bit, a left shift, and sometimes addition, which gives us $O(m)$ bit operations. Therefore, the total running time is $(n+1)*(m+1) = nm+n+m+1$, which gives us $O(nm)$ as the run time.\\
+
+{\bfseries ANSWER: }Since we're computing the result according to the division algorithm, we need to calculate the run time of the rule. We are given that $x$ is in the order of $2^m$ (m+1 bits) and $y$ is in the order of $2^n$ (n+1 bits) as our input. The recursion ends after $n+1$ calls since at each recursive step, $y$ is halved, so the number of bits for y is decreased by 1. Then, in every call, we have a right shift, finding the last bit, a left shift, and sometimes addition, which gives us $O(n)$ bit operations. Therefore, the total running time is $(n+1)*(m+1)$ so far, which gives us $O(nm)$ as the run time for the division algorithm. Now we also need to use the modular exponentiation rule above and compute the total run time. At each call, there's an extra step, which is multiplying an o-bit number, so this gives us a total running time of $O(mno)$.\\
+
 \end{myitem}
 
 \noindent {\bf Problem 4:}
 \begin{myitem}
 \item Compute the following: $2^{902}$ mod 7.\\
 
-$2^{902}$ mod 7 => $(2^{3})^{300}2^{2}$ mod 7 => $(8)^{300}2^{2}$ mod 7
+{\bfseries ANSWER: }$2^{902}$ mod 7 => $(2^{3})^{300}2^{2}$ mod 7 => $(8)^{300}2^{2}$ mod 7
 => $(7+1)^{300}2^{2}$ mod 7\\
 From here we can use:  $(a+b)^{3} = a^{3} + 3a^{2}b + 3ab^{2} + b^{3}$ because we can see that the first three terms are divisible by a. Doing that, we get:\\
 $(7+1)^{300} = 7^{300} + 3(7)^{200}(1) + 3(7)(1)^{200} + (1)^{300}$\\
@@ -248,6 +260,7 @@ This leaves us with $1^{300}2^{2}$ mod 7 => 4 mod 7 => 4. Therefore, $2^{902} mo
 \item Find the modulo multiplicative inverse of 11 mod 120, 13 mod 45,
   35 mod 77, 9 mod 11, 11 mod 1111.\\
 
+{\bfseries ANSWER: }\\
 \noindent {\bf 11 mod 120:}\\
 Since the gcd(11, 120) = 1, we know that there is a modulo multiplicative inverse
 (x) of 11 mod 120. We use the equation $a*b \equiv 1 \pmod{n}$, where b is the
@@ -292,7 +305,10 @@ Since the gcd(11, 1111) $\neq$ 1, there is no modulo multiplicative inverse of 1
   $\forall\ y \in [1,x-1]:\ gcd(x,y) = 1$. Compute the running time of
   an efficient algorithm for finding all the inverses modulo $x^m$
   from the set $\{0, 1, \ldots, x^m-1\}$ that exist.\\
+
+{\bfseries ANSWER: } I don't know\\
 \end{myitem}
+
 
 \noindent {\bf Problem 5:} 
 \begin{myitem}
@@ -300,14 +316,14 @@ Since the gcd(11, 1111) $\neq$ 1, there is no modulo multiplicative inverse of 1
   $(5x+3y,3x+2y)$ and $(x,y)$ have the same greater common
   divisor. True or False, explain.\\
 
-gcd(5x+3x, 3x+2y) => gcd(3x+2y, 2x+y) => gcd(2x+y, x+y) => gcd(x+y, x) => gcd(x, y)\\
+{\bfseries ANSWER: }gcd(5x+3x, 3x+2y) => gcd(3x+2y, 2x+y) => gcd(2x+y, x+y) => gcd(x+y, x) => gcd(x, y)\\
 This is true, because as you can see above, the gcd(5x+3y, 3x+2y) is equal to gcd(x, y).\\
 
 \item Consider the following sequence of numbers: $s_n = 1 +
   \Pi_{i=0}^{n-1} s_i$, where $s_0 = 2$. Prove that any two numbers in
   this sequence are relatively prime.\\
 
-Basis step: $s_0=2$ from given.
+{\bfseries ANSWER: }Basis step: $s_0=2$ from given.
 Inductive step: Suppose for some $n \geq 0$ that $s_n=1+\Pi_{i=0}^{n-1} s_i$. (We need to show that $s_n+1=1+\Pi_{i=0}^{n}s_i$ is prime.)
 \begin{eqnarray*}
 	1+\Pi_{i=0}^{n} s_i &=& 1+[\Pi_{i=0}^{n-1} s_i](s_n)\\
@@ -353,6 +369,8 @@ $\mathcal{H}$.\\
   DPV chapter 1.5.2. How many random bits are needed here?\\
 \end{myitem}
 
+{\bfseries ANSWER: }I don't know\\
+
 \newpage
 
 \noindent {\bf Problem 7:} Answer the following sequence of problems:
@@ -362,7 +380,7 @@ $\mathcal{H}$.\\
   are invertible modulo $n$. Which of these numbers are their own
   inverse module $n$?\\
 
-For a number (x) to be its own inverse, the following must be true:
+{\bfseries ANSWER: }For a number (x) to be its own inverse, the following must be true:
 $$x^{2} \equiv 1 \pmod{n}$$
 So $x^{2} \equiv 1 \pmod{n}$ --> $x^{2}-1 \equiv 0 \pmod{n}$
 --> $(x-1)(x+1) \equiv 0 \pmod{n}$\\
@@ -378,7 +396,7 @@ inverse are 1 and n-1.
   pairing two numbers smaller than $n$ that are multiplicative
   inverses modulo $n$.]\\
 
-Since n is prime, each number $a = {1, ... , n-1}$ has an inverse $\pmod{n}$. 
+{\bfseries ANSWER: }Since n is prime, each number $a = {1, ... , n-1}$ has an inverse $\pmod{n}$. 
 We can pair up the numbers in between 2 and n-2 so that a number in the pair
 is the modular inverse of the other. 1 and n-1 are their own modular inverse, as proven above.
 Multiplying these pairs, 1 , and n-1 is the same as (n-1)!. Since each of these pairs
@@ -394,7 +412,7 @@ Showing that the original equation is true for a prime n.
   n$. [Hint: What does it mean that $n$ is not prime in terms of the
     numbers $1 \leq x < n$?]\\
 
-Since n is not a prime number, it has a divisor (a) such that 1 < a < n.
+{\bfseries ANSWER: }Since n is not a prime number, it has a divisor (a) such that 1 < a < n.
 So a must be one of the numbers that makes up (n-1)!. This tells us that
 a divides (n-1)! Looking at the origanal equation, $(n-1)! = -1 \pmod{n}$
 --> $(n-1)!+1 = 0 \pmod{n}$. This tells us that n divides\\((n-1)! + 1), and since
@@ -409,6 +427,7 @@ $(n-1)! \neq -1 \pmod{n}$.
   rule? [Tip: Even if you are not able to answer the previous two
     questions, you should be able to argue about this question.]\\
 
+{\bfseries ANSWER: }I don't know\\
 
 \end{itemize}
 
@@ -423,6 +442,7 @@ $(n-1)! \neq -1 \pmod{n}$.
 from 0 to 36. The second is the residues of these numbers modulo 5;
 the third column is the residues modulo 7.\\
 
+{\bfseries ANSWER: }\\
 \begin {tabular}{l || c | r}
 \# & \%5 & \%7 \\ \hline
 0 & 0 & 0 \\ \hline
@@ -474,6 +494,7 @@ the third column is the residues modulo 7.\\
 \\
 \end{tabular}
 
+
 \noindent B. Consider two different prime numbers $x$ and $y$. Show that the
 following is true: for every pair of numbers $m$ and $n$ so that: $0
 \leq m < x$ and $0 \leq n < y$, there is a unique integer $q$, where
@@ -481,12 +502,12 @@ $0 \leq q < xy$, so that:
 $$q \equiv m \pmod{x}$$
 $$q \equiv n \pmod{y}$$
 
-Suppose there exists $q_1, q_2$ and $q_1 != q_2$ such that $q_1 = (m, n)$ and $q_2 = (m, n)$\\
+{\bfseries ANSWER: }Suppose there exists $q_1, q_2$ and $q_1 != q_2$ such that $q_1 = (m, n)$ and $q_2 = (m, n)$\\
 
 1. $q_1 = k_1x+m$, $q_2 = l_1x+m$\\
 \indent 2. $q_1 = k_2y+n$, $q_2 = l_2y+n$\\
-\indent 3. $q_1 - q_2 = (k_1x + m) - (l_1x + m) = (k_1 - l_1)$ from 1
-\indent 4. $q_1 - q_2 = (k_2 - l_2) y$ from 2
+\indent 3. $q_1 - q_2 = (k_1x + m) - (l_1x + m) = (k_1 - l_1)$ from 1\\
+\indent 4. $q_1 - q_2 = (k_2 - l_2) y$ from 2\\
 \indent 5. $(k_1 - l_1)x = (k_2 - l_2)y$\\
 \indent 6. $x=\dfrac{(k_2 - l_2)}{(k_1 - l_1)}y$\\
 \indent 7. $\dfrac{(k_2 - l_2)}{(k_1 - l_1)} = 1$ because prime number x can't be the product of two numbers\\
@@ -504,11 +525,13 @@ $$q = ( m \cdot y \cdot (y^{-1} \bmod{x}) + n \cdot x \cdot
   \cdot (y^{-1} \bmod{x})$ and $c_y = x \cdot (x^{-1} \bmod{y})$ and
 their values $\mod{x}$ and $\mod{y}$.]\\
 
+{\bfseries ANSWER: } I don't know\\
+
 \noindent D. What happens in the case of three primes $x$, $y$ and $z$? Do the
 above properties still hold? If they do, how do they look like in this
 case?\\
 
-
+{\bfseries ANSWER: }I don't know\\
 
 \noindent {\bf Problem 9:} There is an office, in which every member
 uses RSA to conduct secure communication with others.  For example,
@@ -539,6 +562,7 @@ checked their public keys in the directory. This is what Mallory got:
 \noindent Finally, Mallory recovered the original message. How did
 Mallory do this? What is the original message?\\
 
+\noindent {\bfseries ANSWER: }\\
 \noindent {\bf How Malory did it:} Malory could have used a combination of
 the chinese remainder theorem and Gauss's algorithm. Malory can use Gauss's
 algorithm to find the message (x) using the enrypted messges ($c_1$,$c_2$,$c_3$),
