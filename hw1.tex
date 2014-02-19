@@ -191,10 +191,11 @@ then show how the overall running time emerges.\\
 \indent 9. $O(n^2)$: problem specifies multiplication (the "power x") as $O(n^2)$; number in front is dropped\\
 \indent 10. $O(n)$: for loop runs linearly\\
 \indent 11. $O(n^2)$: problem specifies multiplication (the "power 2") as $O(n^2)$\\
-\indent 12. $O(n)$:a mod b\\
-\indent 13. $O(n log^3n)$: primality test\\
+\indent 12. $O(n)$: addition in worst case\\
+\indent 13. $O(n log^3n)$: primality test from notes\\
 \indent 14. $O(1)$: returning a boolean doesn't depend on input size\\
 \indent 15. $O(1)$: returning a boolean doesn't depend on input size\\
+\indent The overall runtime is $O(n^4)$ because the highest term is $n^3$ (which gets multiplied by $n$ because of the for loop)
 
 \begin{center}
 {\bf Part B (30 points)}
@@ -491,8 +492,8 @@ Suppose there exists $q_1, q_2$ and $q_1 != q_2$ such that $q_1 = (m, n)$ and $q
 
 1. $q_1 = k_1x+m$, $q_2 = l_1x+m$\\
 \indent 2. $q_1 = k_2y+n$, $q_2 = l_2y+n$\\
-\indent 3. $q_1 - q_2 = (k_1x + m) - (l_1x + m) = (k_1 - l_1)$ from 1
-\indent 4. $q_1 - q_2 = (k_2 - l_2) y$ from 2
+\indent 3. $q_1 - q_2 = (k_1x + m) - (l_1x + m) = (k_1 - l_1)$ from 1\\
+\indent 4. $q_1 - q_2 = (k_2 - l_2) y$ from 2\\
 \indent 5. $(k_1 - l_1)x = (k_2 - l_2)y$\\
 \indent 6. $x=\dfrac{(k_2 - l_2)}{(k_1 - l_1)}y$\\
 \indent 7. $\dfrac{(k_2 - l_2)}{(k_1 - l_1)} = 1$ because prime number x can't be the product of two numbers\\
