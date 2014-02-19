@@ -93,12 +93,12 @@ $ln(f(n))$ is $O(nlnn)$, which grows faster than $ln(g(n))$ because it has more 
 \item $f(n) = lg(lg^*n),\  g(n) = lg^*(lgn)$
 
 
-{\bfseries ANSWER: }We know that $lg^*(lgn)=1+lg^*(lgn)$, so $lg^*(lgn)=lg^*(lgn)-1$. Therefore, we have $\frac{f(n)}{g(n)}= \frac{lg^*(lgn)}{lg^*(lgn)-1}$. We can let $x=lg^*(n)$, giving us $\frac{lg(x)}{x-1}$. As x goes to infinity, $g(n)$ grows a lot faster than $g(n)$ does, so $f(n) = O(g)$.
+{\bfseries ANSWER: }We know that $lg^*(lgn)=1+lg^*(lgn)$, so $lg^*(lgn)=lg^*(lgn)-1$. Therefore, we have $\frac{f(n)}{g(n)}= \frac{lg^*(lgn)}{lg^*(lgn)-1}$. We can let $x=lg^*(n)$, giving us $\frac{lg(x)}{x-1}$. As x goes to infinity, $g(n)$ grows a lot faster than $f(n)$ does, so $f(n) = O(g)$.
 
 
 \item $f(n) = \frac{lgn^2}{n},\ g(n) = lg^*n$
 
-{\bfseries ANSWER: } I don't know\\
+{\bfseries ANSWER: } $f(n)=\frac{lgn^2}{n}=\frac{2lgn}{n}$. Therefore, $\frac{f(n)}{g(n)}=\frac{lgn}{nlg^*n}$. The limit goes to 0 as x approaches infinity since the iterated log increases in size a lot more rapidly. Therefore, $g(n)$ grows faster than $f(n)$, so $f(n) = O(g)$.
 
 \item $f(n) = 2^n,\ g(n) = n^{lgn}$
 
@@ -370,8 +370,6 @@ $\mathcal{H}$.\\
 \end{myitem}
 
 {\bfseries ANSWER: }I don't know\\
-
-\newpage
 
 \noindent {\bf Problem 7:} Answer the following sequence of problems:
 \begin{itemize}

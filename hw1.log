@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 FEB 2014 23:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  18 FEB 2014 23:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,11 +831,6 @@ $[]$
 
 LaTeX Font Info:    Font shape `T1/fav/bx/n' in size <12> not available
 (Font)              Font shape `T1/fav/b/n' tried instead on input line 59.
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
 [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
@@ -966,92 +961,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
-[6]
-LaTeX Font Info:    Try loading font information for TS1+fav on input line 379.
+LaTeX Font Info:    Try loading font information for TS1+fav on input line 377.
 
-LaTeX Font Info:    No file TS1fav.fd. on input line 379.
-
+LaTeX Font Info:    No file TS1fav.fd. on input line 377.
 
 LaTeX Font Warning: Font shape `TS1/fav/m/n' undefined
 (Font)              using `TS1/cmr/m/n' instead
-(Font)              for symbol `textbullet' on input line 379.
+(Font)              for symbol `textbullet' on input line 377.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--382
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 394--398
+Underfull \hbox (badness 10000) in paragraph at lines 377--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--414
+Underfull \hbox (badness 10000) in paragraph at lines 392--396
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--429
+Underfull \hbox (badness 10000) in paragraph at lines 409--412
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 422--427
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 441--444
+Underfull \hbox (badness 10000) in paragraph at lines 439--442
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 505--514
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--525
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 505--506
+Underfull \hbox (badness 10000) in paragraph at lines 526--527
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--516
+Underfull \hbox (badness 10000) in paragraph at lines 528--531
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 523--527
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
+Underfull \hbox (badness 10000) in paragraph at lines 560--562
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--533
+Underfull \hbox (badness 10000) in paragraph at lines 573--576
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 534--535
+Underfull \hbox (badness 10000) in paragraph at lines 577--591
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 562--564
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 575--578
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 579--593
-
- []
-
-[9] (./hw1.aux)
+[8] [9] (./hw1.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1078,7 +1071,7 @@ design/mdbch/md-chb7t.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/mathd
 esign/mdbch/md-chb7y.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/mathde
 sign/mdbch/md-chr7v.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
 cm-super/sfrm1000.pfb>
-Output written on hw1.pdf (9 pages, 104035 bytes).
+Output written on hw1.pdf (9 pages, 104505 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
